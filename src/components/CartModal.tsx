@@ -36,7 +36,7 @@ const CartModal = forwardRef<CartModalHandle, CartModalProps>(function Modal(
         {actions}
       </form>
     </dialog>,
-    document.getElementById('modal') as HTMLElement // Asegura el tipo de `HTMLElement`
+    document.getElementById('modal') as HTMLElement 
   );
 });
 

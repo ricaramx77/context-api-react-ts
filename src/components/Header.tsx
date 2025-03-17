@@ -1,6 +1,6 @@
 import React, { JSX, useContext, useRef } from 'react';
-import { CartContext, CartContextType } from '../store/shopping-cart-context'; // Aseguramos que el contexto esté tipado
-import CartModal, { CartModalHandle } from './CartModal'; // Importamos el tipo de referencia definido en CartModal
+import { CartContext, CartContextType } from '../store/shopping-cart-context';
+import CartModal, { CartModalHandle } from './CartModal';
 
 export default function Header(): JSX.Element {
   const modal = useRef<CartModalHandle>(null); // Tipamos la referencia para que utilice `CartModalHandle`
@@ -9,7 +9,7 @@ export default function Header(): JSX.Element {
   const cartQuantity = items.length;
 
   function handleOpenCartClick(): void {
-    modal.current?.open(); // Usamos el operador opcional para evitar errores si `modal.current` es nulo
+    modal.current?.open(); 
   }
 
   let modalActions: React.ReactNode = <button>Close</button>;

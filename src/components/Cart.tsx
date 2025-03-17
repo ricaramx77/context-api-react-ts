@@ -1,5 +1,5 @@
 import { JSX, useContext } from 'react';
-import { CartContext, CartContextType, CartItem } from '../store/shopping-cart-context'; // Asegúrate de que el contexto esté tipado
+import { CartContext, CartContextType, CartItem } from '../store/shopping-cart-context';
 
 export default function Cart(): JSX.Element {
   const { items, updateItemQuantity } = useContext(CartContext) as CartContextType;
